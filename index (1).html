@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GET HACKED</title>
+  <!-- Meta refresh as a fallback for older browsers -->
+  <meta http-equiv="refresh" content="5;url=https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
+  <style>
+    html,body{height:100%;margin:0;background:#000}
+    .wrap{height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column}
+    h1{
+      color:#ff0000;
+      font-family: "Impact", "Arial Black", sans-serif;
+      font-size: clamp(36px, 10vw, 120px);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px rgba(255,0,0,0.6), 0 0 30px rgba(255,0,0,0.15);
+      margin:0;
+      transform: skewX(-6deg);
+      animation: flicker 0.12s linear infinite;
+    }
+    p{color:#fff;opacity:0.85;font-family:Arial, sans-serif;margin-top:18px}
+    @keyframes flicker {
+      0% {opacity:1}
+      2% {opacity:0.2}
+      4% {opacity:1}
+      7% {opacity:0.5}
+      10% {opacity:1}
+      100% {opacity:1}
+    }
+    .count{margin-top:10px;font-size:18px;color:#ddd}
+    a.fallback{color:#ffcc00;margin-top:18px;text-decoration:none;font-weight:bold}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>GET HACKED</h1>
+    <p class="count">Redirecting in <span id="sec">5</span> seconds...</p>
+    <a class="fallback" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener">Click here if you are not redirected</a>
+  </div>
+
+  <script>
+    // Countdown + redirect (primary method)
+    (function(){
+      var t = 5;
+      var el = document.getElementById('sec');
+      var iv = setInterval(function(){
+        t -= 1;
+        if(t <= 0){
+          clearInterval(iv);
+          // Redirect to the Rickroll
+          window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        } else {
+          el.textContent = t;
+        }
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>
